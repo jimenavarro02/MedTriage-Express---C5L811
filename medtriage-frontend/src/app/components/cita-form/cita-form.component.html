@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <h2>Registrar Nueva Cita</h2>
+  
+  <div class="card p-4 shadow-sm">
+    <div class="mb-3">
+      <label class="form-label">ID Paciente:</label>
+      <input type="number" class="form-control" [(ngModel)]="payload.pacienteId" name="pacienteId">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">ID Doctor:</label>
+      <input type="number" class="form-control" [(ngModel)]="payload.doctorId" name="doctorId">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Nivel de Prioridad:</label>
+      <select class="form-control" [(ngModel)]="payload.nivelPrioridad" name="nivelPrioridad">
+        <option [value]="1">1 - Alta</option>
+        <option [value]="2">2 - Media</option>
+        <option [value]="3">3 - Baja</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Motivo de Consulta:</label>
+      <textarea class="form-control" [(ngModel)]="payload.motivoConsulta" name="motivoConsulta"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Monto de Consulta:</label>
+      <input type="number" class="form-control" [(ngModel)]="payload.montoConsulta" name="montoConsulta">
+    </div>
+
+    <button type="button" class="btn btn-success w-100" (click)="guardarCita()">Guardar Cita</button>
+  </div>
+</div>

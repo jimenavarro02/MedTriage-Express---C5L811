@@ -1,0 +1,56 @@
+.container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4a3b4c;
+  max-width: 650px;
+}
+
+h2 {
+  color: #884a63;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(136, 74, 99, 0.08);
+  border: 1px solid #f4e3eb;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #6b344a;
+}
+
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 1px solid #e0c8d2;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #b86282;
+  box-shadow: 0 0 0 0.2rem rgba(184, 98, 130, 0.15);
+}
+
+/* Botón de guardar con estilo femenino suave */
+.btn-success {
+  background-color: #79a891;
+  border-color: #79a891;
+  border-radius: 25px;
+  padding: 0.75rem;
+  font-weight: 600;
+  width: 100%;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-success:hover {
+  background-color: #638c77;
+  border-color: #638c77;
+  box-shadow: 0 4px 12px rgba(121, 168, 145, 0.3);
+}

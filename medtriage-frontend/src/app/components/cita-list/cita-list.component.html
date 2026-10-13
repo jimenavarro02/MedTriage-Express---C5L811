@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <h2>Listado de Citas Médicas</h2>
+  
+  <div class="mb-3">
+    <button class="btn btn-outline-secondary me-2" (click)="cambiarFiltro('TODAS')">Todas</button>
+    <button class="btn btn-outline-danger me-2" (click)="cambiarFiltro(1)">Alta</button>
+    <button class="btn btn-outline-warning me-2" (click)="cambiarFiltro(2)">Media</button>
+    <button class="btn btn-outline-success" (click)="cambiarFiltro(3)">Baja</button>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Paciente</th>
+        <th>Doctor</th>
+        <th>Prioridad</th>
+        <th>Motivo</th>
+        <th>Estado</th>
+        <th>Monto</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of citasFiltradas()">
+        <td>{{ c.codigoCita }}</td>
+        <td>{{ c.nombrePaciente }}</td>
+        <td>{{ c.nombreDoctor }}</td>
+        <td><span class="badge bg-secondary">{{ c.nivelPrioridad }}</span></td>
+        <td>{{ c.motivoConsulta }}</td>
+        <td><span class="badge bg-info">{{ c.estado }}</span></td>
+        <td>¢{{ c.montoConsulta }}</td>
+        <td>
+          <button class="btn btn-sm btn-primary" *ngIf="c.estado !== 'ATENDIDA'" (click)="avanzarEstado(c)">Avanzar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
